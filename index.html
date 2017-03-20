@@ -10,8 +10,186 @@
     <link href='https://fonts.googleapis.com/css?family=Lato:400,400italic,900' rel='stylesheet' type='text/css'>
   </head>
   <body>
-	hello world
-	<script src="https://unpkg.com/vue/dist/vue.js"></script>
+  	<div id="root" class="app">
+	    <nav class="nav">
+	      <div class="container">
+	        <div class="nav-left">
+	          <a class="nav-item" @click="currentView='me'">
+	            <h1 class="size-title"><strong>VARNA</strong> VINCENT</h1>
+	          </a>
+	        </div>
+	        <span class="nav-toggle" @click="toggleMenu">
+	          <span></span>
+	          <span></span>
+	          <span></span>
+	        </span>
+	        <div class="nav-right nav-menu" :class="{ 'is-active': showMenu }" @click="toggleMenu">
+	          <a class="nav-item" :class="[currentView=='portfolio' ? 'link-active' : '']" @click="currentView='portfolio'">PORTFOLIO</a>
+	          <a class="nav-item" :class="[currentView=='resume' ? 'link-active' : '']" @click="currentView='resume'">RESUME</a>
+	          <a class="nav-item" :class="[currentView=='blog' ? 'link-active' : '']" @click="currentView='blog'">BLOG</a>
+	        </div>
+	      </div>
+	    </nav>
+    	
+    	<component :is="currentView"></component>
+
+	    <div class="content has-text-centered">
+	      <footer>
+	        <p>
+	          <a class="icon" href="https://github.com/varna-vincent" target="_blank"><i class="fa fa-github"></i></a>
+	          <a class="icon" href="https://twitter.com/VarnaVincent" target="_blank"><i class="fa fa-twitter"></i></a>
+	          <a class="icon" href="https://www.linkedin.com/in/varna-vincent-5b763541" target="_blank"><i class="fa fa-linkedin"></i></a>
+	          <a class="icon" href="https://www.pinterest.com/varnamvmv/" target="_blank"><i class="fa fa-pinterest"></i></a>
+	        </p>
+	        <h6 class="is-small copyrights">Designed and developed by Varna Vincent</h6>
+	      </footer>
+	    </div>
+	</div>
+
+	<!-- Me -->
+	<script id="me-template" type="text/x-template">
+	  <div id="me" class="body-area container">
+	    <div class="content">
+	      <figure class="image is-128x128">
+	        <img src="assets/images/me.jpg">
+	      </figure>
+	      <h1 class="about">Hi, I am <strong>Varna Vincent</strong></h1>
+	      <p class="me">I design and develop for the web and mobile.</p>
+	    </div>
+	  </div>
+	</script>
+
+	<!-- Portfolio -->
+	<script id="portfolio-template" type="text/x-template">
+	  <div id="portfolio" class="body-area container">
+	    <div class="content">
+	    <section class="hero">
+	      <div class="hero-body">
+	        <div class="container">
+	          <h1 class="about">
+	            PROJECTS
+	          </h1>
+	          <div class="columns">
+	            <div class="column">
+	              <a href="https://number-sense.herokuapp.com" target="_blank">
+	                <h2 class="project-title">Number Sense</h2>
+	                <figure class="image is-128x128">
+	                  <img src="http://www.publicdomainpictures.net/pictures/170000/velka/little-boy-with-abacus-1463679162k8p.jpg">
+	                  <figcaption> Vue, SVG, HTML5 </figcaption>
+	                </figure>
+	              </a>
+	              <p>Interactive game to help develop <br/> your number sense</p>
+	            </div>
+	            <div class="column">
+	              <a href="https://github.com/varna-vincent/NumberSense" target="_blank">
+	                <h2 class="project-title">GlamUp</h2>
+	                <figure class="image is-128x128">
+	                  <img src="https://s-media-cache-ak0.pinimg.com/736x/f2/ac/50/f2ac503f971dd2888d7ccb1079f0dfb5.jpg">
+	                  <figcaption> React-Native, Firebase </figcaption>
+	                </figure>
+	              </a>
+	              <p>Mobile app that tells you everything about <br/> the latest makeup products</p>
+	            </div>
+	            <div class="column">
+	              <a href="https://github.com/varna-vincent/NumberSense" target="_blank">
+	                <h2 class="project-title">XML to Pojo</h2>
+	                <figure class="image is-128x128">
+	                  <img src="https://static.pexels.com/photos/207580/pexels-photo-207580.jpeg">
+	                  <figcaption> Java, Bootstrap </figcaption>
+	                </figure>
+	              </a>
+	              <p>A tool to generate Pojo classes from XML</p>
+	            </div>
+	          </div>
+	        </div>
+	      </div>
+	    </section>
+	    </div>
+	  </div>
+	</script>
+
+	<!-- Resume -->
+	<script id="resume-template" type="text/x-template">
+		<div id="resume" class="body-area container">
+		  <div class="content">
+		  	<div class="section">
+				<a class="button is-primary" href="/static/Resume.pdf" download="Varna_Resume.pdf">
+		          <span class="icon">
+		            <i class="fa fa-download"></i>
+		          </span>
+		          <span>Resume</span>
+		        </a>
+	        </div>
+	       <p class="hero">
+	        An ace web developer with four years experience in extensive web and mobile application development in vacation rental, product distribution and healthcare domains. Known for strong technical, analytical and organizational abilities. Excellent team player with strong work ethic and personal integrity. Strong technical expertise in the latest web and mobile technologies and comfortable following the agile practices.</p>
+	       <div class="section columns">
+	       	<div class="column">
+	       		<h2 class="project-title">SKILLS</h2>
+	       		<ul>
+			    	<li><strong>Strong: </strong>Core Java, Javascript, VueJs</li>
+			    	<li><strong>Intermediate: </strong>AngularJS, Git, HTML5, Ionic framework, Apache Camel, REST, SOAP Webservices, MongoDB, MySQL, XML, XSLT, AJAX</li>
+			    	<li><strong>Familiar: </strong>Spring, Oracle, Maven</li>
+			    </ul>
+	       	</div>
+	       	<div class="column">
+	       		<h2 class="project-title">EXPERIENCE</h2>
+	       		<ul>
+				  	<li>
+				  		<strong>Software Developer</strong> at Nibodha Technologies Pvt Ltd from <em>Mar 15 Jul 16</em> 
+				  		Projects - Acer, HealthFabric, Data Scrapper
+				  	</li>
+				  	<li>
+				  		<strong>Software Engineer</strong> at Zerone Consulting Pvt Ltd from <em>Aug 12 Mar 15</em> <br/>
+				  		Projects - SOS, Mobile Insight, Always On Vacation and Care Services
+				  	</li>
+			  	</ul>
+	       	</div>
+	       	<div class="column">
+	       		<h2 class="project-title">EDUCATION</h2>
+	       		<ul>
+			    	<li>Currently pursuing <strong>Masters Program in Software Engineering </strong> at Santa Clara University, CA</li>
+			    	<li><strong>BTech in Computer Science and Engineering </strong>from TocH Institute of Science and Technology, India</li>
+			    </ul>
+	       	</div>
+	       </div>
+	      </div>
+		</div>
+	</script>
+
+	<!-- Blog -->
+	<script id="blog-template" type="text/x-template">
+		<div id="blog" class="body-area container">
+		  <section class="hero">
+			  <div class="hero-body text">
+		      <h1 class="title">Function Expression vs Function Declaration</h1>
+		      <h2 class="subtitle">
+		      	I had previously thought <code>function functionName() {}</code> was syntactic sugar for 
+		      	<a href="http://varnastechreflection.blogspot.com/" target="_blank">Read More</a>
+		      </h2>
+			  </div>
+		  </section>
+		  <section class="hero">
+			  <div class="hero-body text">
+		      <h1 class="title">Lorem Ipsum</h1>
+		      <h2 class="subtitle">
+		        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+		      	<a href="http://varnastechreflection.blogspot.com/" target="_blank">Read More</a>
+		      </h2>
+			  </div>
+		  </section>
+		  <section class="hero">
+			  <div class="hero-body text">
+		      <h1 class="title">de Finibus Bonorum et Malorum</h1>
+		      <h2 class="subtitle">
+		        Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque 
+		      	<a href="http://varnastechreflection.blogspot.com/" target="_blank">Read More</a>
+		      </h2>
+			  </div>
+		  </section>
+	  	</div>
+	</script>
+    <!-- built files will be auto injected -->
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
     <script src="js/script.js"></script>
   </body>
 </html>

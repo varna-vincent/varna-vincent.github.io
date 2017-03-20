@@ -1,0 +1,160 @@
+/* root */
+.app {
+  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+  margin-top: 5px;
+}
+
+.body-area {
+  height: 80vh;
+}
+
+nav {
+  border-bottom: 1px solid #EEE;
+  margin-bottom: 10px;
+}
+
+.size-title {
+  font-size: 1.2em;
+  font-family: 'Quicksand';
+  color: #4E3F30;
+  letter-spacing: 2px;
+}
+
+.link-active {
+  color: #0CA5B0;
+  font-weight: bolder;
+}
+
+.copyrights {
+  color: #AAA;
+}
+
+/* common */
+img {
+  border-radius: 120px;
+  border: 12px solid #EEE;
+}
+
+h1, h2, h4, .project-title {
+  color: #4E3F30;
+  font-family: 'Lato';
+  font-weight: normal;
+}
+
+/* me */
+#me .about {
+  color: #4E3F30;
+  font-family: 'Quicksand';
+  font-size: 50px;
+  font-weight: 500;
+  line-height: 50px;
+  letter-spacing: 0px;
+  margin-bottom: 30px;
+}
+
+#me p {
+  color: #4E3F30;
+  font-family: 'Lato';
+  font-size: 40px;
+  font-weight: 400;
+  line-height: 36px;
+  margin-bottom: 30px;
+  text-indent: 36px;
+}
+
+#me .about strong {
+  color: #0CA5B0;
+}
+
+#me a, #me a:hover {
+  color: #42b983;
+}
+
+#me figure {
+  margin-top: 60px;
+  display: inline-block;
+}
+
+/* portfolio */
+
+#portfolio .about {
+  color: #0CA5B0;
+  font-family: 'Quicksand';
+  font-size: 50px;
+  font-weight: 500;
+  line-height: 70px;
+  letter-spacing: 0px;
+  margin-bottom: 50px;
+}
+
+#portfolio p {
+  color: #4E3F30;
+  font-family: 'Lato';
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 25px;
+  text-indent: 36px;
+  word-wrap: break-word;
+}
+
+#portfolio figure {
+  display: inline-block;
+}
+
+#portfolio a, #portfolio a:hover {
+  color: #0CA5B0; 
+  text-decoration: none;
+}
+
+/* resume */
+
+#resume p {
+  color: #4E3F30;
+  font-family: 'Lato';
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 25px;
+  text-align: justify;
+  word-wrap: break-word;
+  margin-left: 0.5rem;
+}
+
+#resume ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+#resume li {
+  color: #4E3F30;
+  font-family: 'Lato';
+  font-size: 1.1em;
+  text-align: justify;
+  margin: 0 10px;
+}
+
+#resume li strong {
+  color: #0CA5B0;
+}
+
+/* blog */
+#blog .text {
+  text-align: justify;
+  margin-left: 0.5rem;
+}
+
+#blog code {
+  font-style: italic;
+  color: #4E3F30;
+  margin: 0px 4px;
+}
+
+#blog a, #blog a:hover {
+  color: #0CA5B0; 
+  text-decoration: none;
+  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  font-size: 0.9em;
+}
