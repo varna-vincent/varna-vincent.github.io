@@ -37,6 +37,9 @@ nav {
 img {
   border-radius: 120px;
   border: 12px solid #EEE;
+}
+
+.icon {
   height: 100px;
 }
 
