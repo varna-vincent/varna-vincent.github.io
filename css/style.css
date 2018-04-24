@@ -105,6 +105,10 @@ h1, h2, h4, .project-title {
   display: inline-block;
 }
 
+#portfolio img {
+  height: 100px;
+}
+
 #portfolio a, #portfolio a:hover {
   color: #0CA5B0; 
   text-decoration: none;
